@@ -1,0 +1,176 @@
+body {
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: -webkit-linear-gradient(#667eea, #764ba2) fixed; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#667eea, #764ba2) fixed; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#667eea, #764ba2) fixed; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#667eea, #764ba2) fixed;
+    color: #ffffff
+}
+
+.App {
+    background: none;
+    background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index:1;
+    -webkit-animation: snow 10s linear infinite;
+    -moz-animation: snow 10s linear infinite;
+    -ms-animation: snow 10s linear infinite;
+    animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}   
+
+.App {
+    text-align: center;
+    padding: 5em;
+}
+
+.welcome {
+    display: inherit;
+    position: relative;
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.App-title { 
+    font: bold 300% Consolas, Monaco, monospace;
+    border-right: .1em solid black;
+    width: 16.5em; 
+    width: 21ch;
+    margin: 2em 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: typing 2s steps(21, end),
+               blink-caret .5s step-end infinite alternate;
+}
+
+/* Profile */
+.profile {
+    display: flex;
+    justify-content: center;
+}
+
+.profile_info {
+    margin-left: 1em;
+}
+
+.profile_img {
+    width: 10em;
+    height: 10em;
+    border: 0.2em solid #ffffff;
+    border-radius: 5em;
+    object-fit: cover;
+}
+
+.profile_name {
+    font-size: 2em;
+}
+
+.profile_followers, .profile-genres {
+    font-size: 1em;
+}
+
+/* Gallery */
+
+.top_tracks_info {
+    font-size: 2em;
+    margin-bottom: -0.5em;
+    text-align: left;
+}
+
+.track {
+    display: inline-block;
+    width: 12em;
+    height: 12em;
+    margin: 1em;
+    text-align: left;
+    cursor: pointer;
+    position: relative
+}
+
+.track_img {
+    width: 12em;
+    height: 12em;
+    border: 0.2em solid #ffffff;
+    border-radius: 0.2em;
+    object-fit: cover;
+    position: absolute;
+}
+
+.track_text {
+    background: linear-gradient(#434343 , #000000);
+    color: white;
+    opacity: 0.75;
+    width: 12em;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.track_play {
+    position: absolute;
+    width: 12em;
+    height: 12em;
+}
+
+.track_play_inner {
+    position: absolute;
+    text-align: center;
+    font-size: 3em;
+    background-color: black;
+    border-radius: 2em;
+    width: 2em;
+    height: 2em;
+    color: white;
+    padding-top: 0.3em;
+    padding-left: 0.1em;
+    margin-top: 0.9em;
+    margin-left: 0.9em;
+    opacity: 0;
+}
+
+.track_play_inner:hover {
+    opacity: 0.8;
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade-in {
+    from{
+        opacity: 0
+    }
+    
+    to {
+        opacity: 0.8;
+    }
+}
+
