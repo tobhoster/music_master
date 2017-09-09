@@ -50,7 +50,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <div className="App-title">Music  🎶  Master </div>
+                <div className="App-title">Music  Master </div>
                 <FormGroup>
                     <InputGroup>
                         <FormControl 
