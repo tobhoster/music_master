@@ -8,10 +8,12 @@ class Profile extends Component {
 
         return (
             <div>
-                <img
-                alt="Profile"
-                className="profile_img"
-                src={artist.images[0].url}/>
+                {
+                artist.images[0].url !== undefined ? <img
+                  alt="Profile"
+                  className="profile_img"
+                  src={artist.images[0].url}/> : <div>Image</div>}
+
                 <div className="profile_info">
                     <div className="profile_name">{artist.name}</div>
                     <div className="profile_followers">{artist.followers.total} followers</div>
